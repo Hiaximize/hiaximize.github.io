@@ -8,6 +8,7 @@ const apiCall = (name) => {
     })
     .then(
         (data)=>{
+            $('p').remove();
             // logs the data that is returned from the query for manual sifting
             console.log(data);
             
@@ -46,7 +47,8 @@ const apiCall = (name) => {
                 const imgPath = String(data.results[i].image);
 
                 // creates the img element and adds the current img path
-                $('#charImage').attr('scr', imgPath).css('height', '100px').css('width', '100px');
+                $('#characterImage').attr('src', `${imgPath}`)
+                // .css('height', '100px').css('width', '100px');
                 
             }
             // what to do if name isn't present
@@ -67,6 +69,8 @@ const apiCall = (name) => {
 
 // event listener/handler for submit button
 $('#submitButton').on('click', ()=>{
+    $('p').remove();
+
     // grabs user input for custom query
     let $customInput = $('input[type="text"]').val();
 
