@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    
-    <header>
 
-    </header>
-
-    <div id="mainContent">
+    <div id="pageContainer">
 
         <div id="header">
             <div id="Characters">
+
+                <input class="customInput" id="userInput" type="text" placeholder="Enter character name">
+
+                <input class="customInput" id="submitButton" type="submit" value="Query">
+
                 <button class="characters" id="rick">Rick</button>
                 
                 <button class="characters"id="morty">Morty</button>
@@ -36,20 +37,31 @@
             </div>
 
         </div>
+        
+        <div id="mainContent">
+        <!-- Results from query -->
+            <div id="results">
 
-        <div id="results">
-            <h3 id="name">Name:</h3>
+                <h3 id="name">Name:</h3>
 
-            <h3 id="status">Status:</h3>
+                <h3 id="status">Status:</h3>
 
-            <h3 id="species">Species:</h3>
+                <h3 id="species">Species:</h3>
 
-            <h3 id="gender">Gender:</h3>
+                <h3 id="gender">Gender:</h3>
 
-            <h3 id="location">Location:</h3>
+                <h3 id="origin">Origin:</h3>
+
+                <h3 id="location">Location:</h3>
+            </div>
+
+            <div id="charactersImage">
+                <img id="charImage" src='https://rickandmortyapi.com/api/character/avatar/1.jpeg'>
+            </div>
+
         </div>
-
     </div>
+
 
     <!-- JQuery Library -->
     <script

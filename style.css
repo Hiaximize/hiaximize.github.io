@@ -1,6 +1,15 @@
 body{
     background-image: url('rick_morty_background.jpg');
-    background-size: cover;    background-repeat: no-repeat; 
+    background-size: 100%;
+    background-repeat: no-repeat; 
+}
+#mainContent{
+    display: flex;
+    justify-content: space-between;
+}
+#userInput{
+    text-transform: capitalize;
+    padding: 5px;
 }
 #header{
     margin-top: 15px;
@@ -9,7 +18,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.characters{
+#resetButton{
+    border-radius: 100px;
+    font-size: 25px;
+    background-color: red;
+}
+.characters, .customInput{
     font-size: 20px;
     border-radius: 4px;
     background-color: white;
@@ -20,10 +34,13 @@ body{
     padding: 10px;
     width: 38%;
     background-color: white;
-    /* height: 300px; */
     margin-left: 14px;
     margin-top: 20px;
+    border-radius: 8px;
 }
 p{
     margin-left: 50px;
+}
+text{
+    color: white;
 }
