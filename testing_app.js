@@ -1,3 +1,18 @@
+////////functions for modal////////////////////
+
+const show = () => {
+    $('#modal').show;
+}
+const close = () =>{
+    $('#modal').css('display', 'none');
+}
+
+$('#modalExit').on('click', close);
+
+setTimeout(() => {
+    $('#modal').show();
+}, 200);
+
 
 // main function for the ajax call
 const apiCall = (name) => {
@@ -92,7 +107,10 @@ $('#submitButton').on('click', ()=>{
 })
 
 // event listener/handler for reset button
-$('#resetButton').on('click', ()=>{location.reload();});
+$('#resetButton').on('click', ()=>{
+    $('span').remove();
+    $('img').attr('src', '');
+});
 
 // event listeners/handlers for each hard coded query button [rick, morty, summer, jerry, beth]
 $('#rick').on('click',($name)=>{
