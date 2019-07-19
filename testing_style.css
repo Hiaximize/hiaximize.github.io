@@ -8,6 +8,7 @@ body{
     justify-content: space-between;
 }
 #userInput{
+    width: 250px;
     text-transform: capitalize;
     padding: 5px;
 }
@@ -38,9 +39,10 @@ body{
     margin-top: 20px;
     border-radius: 8px;
 }
-p{
-    margin-left: 50px;
-    font-family: 'Changa', sans-serif
+span{
+    margin-left: 20px;
+    font-family: 'Changa', sans-serif;
+    font-size: 30px;
 }
 img {
     margin-top: 50px;
@@ -50,7 +52,5 @@ img {
 .titles{
     font-family: "Audiowide", cursive;
 }
-span {
-    margin-left: 20px;
-}
+
 

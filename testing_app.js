@@ -22,14 +22,20 @@ const apiCall = (name) => {
 
         // loops through the array of objects
         for (var i =0; i < data.results.length; i++){
+
             //using toLowerCase() to sanitize user input// checks to see if the name is present in the array of objects
             if (data.results[i].name.toLowerCase() == name.toLowerCase()){
                 /////////appending the name/////
                 $name.append($('<span>').text(data.results[i].name));
                 console.log("found "+name);
 
+                //////logic to change text color if character is dead///
+                if (data.results[i].status == 'Dead'){
                 ///////appending status//////
-                $status.append($('<span>').text(data.results[i].status));
+                    $status.append($('<span>').text(data.results[i].status).css('color', 'red').css('font-weight', '800').css('text-transform', 'uppercase'));
+                }else{
+                    $status.append($('<span>').text(data.results[i].status));
+                }
 
                 ///////appending species/////
                 $species.append($('<span>').text(data.results[i].species));
@@ -77,7 +83,7 @@ $('#submitButton').on('click', ()=>{
     // Sanitized user input to desired format
     $customInput=$customInput.toLowerCase().split(' ').map((string)=> string.charAt(0).toUpperCase() + string.substring(1)).join(' ');
     
-    // calling the main function
+    // calling the main function and passing user input
     apiCall($customInput);
 })
 
