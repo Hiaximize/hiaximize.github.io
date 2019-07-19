@@ -1,3 +1,18 @@
+////////functions for modal////////////////////
+
+const show = () => {
+    $('#modal').show;
+}
+const close = () =>{
+    $('#modal').css('display', 'none');
+}
+
+$('#modalExit').on('click', close);
+
+setTimeout(() => {
+    $('#modal').show();
+}, 200);
+
 
 // main function for the ajax call
 const apiCall = (name) => {
@@ -22,14 +37,24 @@ const apiCall = (name) => {
 
         // loops through the array of objects
         for (var i =0; i < data.results.length; i++){
+
             //using toLowerCase() to sanitize user input// checks to see if the name is present in the array of objects
             if (data.results[i].name.toLowerCase() == name.toLowerCase()){
                 /////////appending the name/////
                 $name.append($('<span>').text(data.results[i].name));
-                console.log("found "+name);
 
+                //////logic to change text color if character is dead///
+                if (data.results[i].status == 'Dead'){
                 ///////appending status//////
-                $status.append($('<span>').text(data.results[i].status));
+
+                    // old styling for if they are dead [red letters only]
+                    // $status.append($('<span>').text(data.results[i].status).css('color', 'red').css('font-weight', '800').css('text-transform', 'uppercase'));
+
+                    $status.append($('<span>').text(data.results[i].status).css('color', 'white').css('background-color', 'red').css('font-weight', '800').css('text-transform', 'uppercase').css('border-radius', '8px').css('padding-right', '4px').css('padding-left', '4px'));
+                }
+                else{
+                    $status.append($('<span>').text(data.results[i].status));
+                }
 
                 ///////appending species/////
                 $species.append($('<span>').text(data.results[i].species));
@@ -77,12 +102,15 @@ $('#submitButton').on('click', ()=>{
     // Sanitized user input to desired format
     $customInput=$customInput.toLowerCase().split(' ').map((string)=> string.charAt(0).toUpperCase() + string.substring(1)).join(' ');
     
-    // calling the main function
+    // calling the main function and passing user input
     apiCall($customInput);
 })
 
 // event listener/handler for reset button
-$('#resetButton').on('click', ()=>{location.reload();});
+$('#resetButton').on('click', ()=>{
+    $('span').remove();
+    $('img').attr('src', '');
+});
 
 // event listeners/handlers for each hard coded query button [rick, morty, summer, jerry, beth]
 $('#rick').on('click',($name)=>{

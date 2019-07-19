@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       
     
     <!-- fonts for the website -->
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Changa&display=swap" rel="stylesheet">
 
     <!-- css style sheet -->
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="testing_style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Project 1</title>
+    <title>Rick & Morty Project</title>
 </head>
 
 <body>
@@ -21,11 +20,11 @@
 
         <div id="header">
             <div id="Characters">
-
+                
                 <input class="customInput" id="userInput" type="text" placeholder="Character Name">
 
                 <input class="customInput" id="submitButton" type="submit" value="Query">
-
+                
                 <button class="characters" id="rick">Rick</button>
                 
                 <button class="characters"id="morty">Morty</button>
@@ -42,6 +41,21 @@
                 <button id="resetButton">RESET</button>
             </div>
 
+        </div>
+
+        <!-- Modal to explain the site -->
+    <div id="modal">
+            <div id="modal-textbox">
+                <h4>Rick and Morty Character database</h4>
+    
+                <p>You can quickly grab information on the main characters using their corresponding buttons at the top. Use the reset button to empty the results </p>
+                <p>Use the custom search bar to find your favorite character</p>
+                <div id="divFooter">
+                    <h6>Created by: Derek Barker</h6>
+                    <button id="modalExit">Close</button>
+                </div>
+    
+            </div>
         </div>
         
         <div id="mainContent">
@@ -76,7 +90,7 @@
     crossorigin="anonymous"></script>
     
     <!-- Javascript Link -->
-    <script src="app.js"></script>
+    <script src="testing_app.js"></script>
 
  
 </body>
