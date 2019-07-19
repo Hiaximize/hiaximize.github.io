@@ -27,13 +27,17 @@ const apiCall = (name) => {
             if (data.results[i].name.toLowerCase() == name.toLowerCase()){
                 /////////appending the name/////
                 $name.append($('<span>').text(data.results[i].name));
-                console.log("found "+name);
 
                 //////logic to change text color if character is dead///
                 if (data.results[i].status == 'Dead'){
                 ///////appending status//////
-                    $status.append($('<span>').text(data.results[i].status).css('color', 'red').css('font-weight', '800').css('text-transform', 'uppercase'));
-                }else{
+
+                    // old styling for if they are dead [red letters only]
+                    // $status.append($('<span>').text(data.results[i].status).css('color', 'red').css('font-weight', '800').css('text-transform', 'uppercase'));
+
+                    $status.append($('<span>').text(data.results[i].status).css('color', 'white').css('background-color', 'red').css('font-weight', '800').css('text-transform', 'uppercase').css('border-radius', '8px').css('padding-right', '4px').css('padding-left', '4px'));
+                }
+                else{
                     $status.append($('<span>').text(data.results[i].status));
                 }
 

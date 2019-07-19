@@ -30,6 +30,7 @@ body{
     background-color: white;
     letter-spacing: 4px;
     margin: 4px;
+    font-family: "Audiowide", cursive;
 }
 #results{
     padding: 10px;
@@ -42,7 +43,7 @@ body{
 span{
     margin-left: 20px;
     font-family: 'Changa', sans-serif;
-    font-size: 30px;
+    font-size: 26px;
 }
 img {
     margin-top: 50px;
@@ -51,6 +52,7 @@ img {
 }
 .titles{
     font-family: "Audiowide", cursive;
+    font-size: 30px;
 }
 
 
