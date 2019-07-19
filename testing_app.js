@@ -71,9 +71,12 @@ const apiCall = (name) => {
                 // path of image for current character
                 const imgPath = String(data.results[i].image);
 
-                // creates the img element and adds the current img path
-                $('#characterImage').attr('src', `${imgPath}`)
-                // .css('height', '100px').css('width', '100px');
+                // adds the current img path
+                $('#characterImage').attr('src', `${imgPath}`);
+                
+                // adds the current img path to the mobile friendly div
+
+                $('#mediaCharacterImage').attr('src', `${imgPath}`);
                 
             }
             // what to do if name isn't present

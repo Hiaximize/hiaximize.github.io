@@ -66,7 +66,7 @@ img {
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-	/*This puts our modal in front of the body (which has a default z-index setting of `0`)*/
+	/*This puts the modal in front of the body (which has a default z-index setting of `0`)*/
 	overflow: auto;
 	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
 	display: none;
@@ -97,11 +97,79 @@ img {
     font-family: "Audiowide", cursive;
 }
 
+#mediaQueryImageContainer{
+    visibility: hidden;
+}
+#mediaQuerySubmit{
+    visibility: hidden;
+}
+
 
 /* /////////////// Media Query //////////  */
 
-/* @media (min-width: ){
-
-} */
+@media (max-width: 1260px){
+    #modal-textbox{
+        width: 80%;
+        height: 100%;
+    }
+    body {background-color: black;
+        background-image: none;
+    }
+    #header{
+        display: block;
+        margin-bottom: 4px;
+    }
+    #submitButton{
+        height: 75px;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #mediaQuerySubmit{
+        visibility: visible;
+        margin: 0 auto;
+    }
+    .characters{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    #pageContainer{
+        display: block;
+        margin: 0 auto;
+    }
+    #results{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #charactersImage{
+        display: none;
+    }
+    #mediaQueryImageContainer{
+        visibility: visible;
+        display: block;
+        margin-bottom: 4px;
+    }
+    #mediaCharactersImage{
+        margin: 0 auto;
+    }
+    #mediaCharacterImage{
+        margin: 0 auto;
+        width: 99%;
+        left: 5;
+        border-radius: 8px;
+        border: 2px solid white;
+    }
+    #userInput{
+        width: 97%;
+        text-align: center;
+    }
+    #resetButton{
+        width: 100%;
+        margin-top: 4px;
+    }
+    
+} 
 
 
