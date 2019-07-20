@@ -1,6 +1,6 @@
 body{
     background-image: url('rick_morty_background.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat; 
 }
 #mainContent{
@@ -98,10 +98,10 @@ img {
 }
 
 #mediaQueryImageContainer{
-    visibility: hidden;
+    display: none;
 }
 #mediaQuerySubmit{
-    visibility: hidden;
+    display: none;
 }
 
 
