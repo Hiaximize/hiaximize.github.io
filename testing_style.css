@@ -3,6 +3,39 @@ body{
     background-size: cover;
     background-repeat: no-repeat; 
 }
+/* #rickLeftEyeCover{
+background-color: white;
+height: 12px;
+width: 12px;
+position: absolute;
+right: 430px;
+top: 380px;
+}
+#rickRightEyeCover{
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    right: 362px;
+    top: 378px;
+}
+#mortyLeftEyeCover{
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    right: 654px;
+    top: 586px;
+    }
+#mortyRightEyeCover{
+        background-color: white;
+        height: 12px;
+        width: 12px;
+        position: relative;
+        right: 560px;
+        top: 571px;
+} */
+
 #mainContent{
     display: flex;
     justify-content: space-between;
@@ -107,7 +140,7 @@ img {
 
 /* /////////////// Media Query //////////  */
 
-@media (max-width: 1260px){
+@media (max-width: 1158px)/* and (min-height: 859px)*/{
     #modal-textbox{
         width: 80%;
         height: 100%;
@@ -172,4 +205,21 @@ img {
     
 } 
 
-
+@media (max-width: 1580px){
+    body{
+        background-size: auto;
+        background-color: black;
+        background-image: url('mobile_rick_morty_background.jpg');
+    }  
+} 
+@media (max-width: 1445px){
+    body{
+        background-image: url('mobile_rick_morty_tall_background.jpg');
+        background-size: cover;
+    }
+}
+@media (min-width: 2307px){
+    body{
+        background-image: url('mobile_rick_morty_tall_background.jpg');
+    }
+}

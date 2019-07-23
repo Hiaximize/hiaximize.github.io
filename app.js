@@ -41,8 +41,8 @@ const apiCall = (name) => {
             //using toLowerCase() to sanitize user input// checks to see if the name is present in the array of objects
             if (data.results[i].name.toLowerCase() == name.toLowerCase()){
                 /////////appending the name/////
-                $name.append($('<span>').text(data.results[i].name));
-
+                $name.append($('<span>').text(data.results[i].name));            
+            
                 //////logic to change text color if character is dead///
                 if (data.results[i].status == 'Dead'){
                 ///////appending status//////
@@ -107,33 +107,40 @@ $('#submitButton').on('click', ()=>{
     
     // calling the main function and passing user input
     apiCall($customInput);
+    return false;
 })
 
 // event listener/handler for reset button
 $('#resetButton').on('click', ()=>{
     $('span').remove();
     $('img').attr('src', '');
+    return false;
 });
 
 // event listeners/handlers for each hard coded query button [rick, morty, summer, jerry, beth]
 $('#rick').on('click',($name)=>{
     apiCall("Rick Sanchez");
+    return false;
 });
 
 $('#morty').on('click',($name)=>{
     apiCall("Morty Smith");
+    return false;
 });
 
 $('#summer').on('click',($name)=>{
     apiCall("Summer Smith");
+    return false;
 });
 
 $('#jerry').on('click',($name)=>{
     apiCall("Jerry Smith");
+    return false;
 });
 
 $('#beth').on('click',($name)=>{
     apiCall("Beth Smith");
+    return false;
 });
 
 
